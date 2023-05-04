@@ -7,8 +7,8 @@ jobs:
   #job name
   check-application:
     runs-on: ubuntu-latest
-    strategy:
-      # #permite que seja possivel testar em multiplas versoes
+    # #permite que seja possivel testar em multiplas versoes
+    # strategy:
       # matrix:
       #   go: ['1.14', '1.15']
     steps:
