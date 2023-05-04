@@ -3,14 +3,14 @@ on:
   pull_request:
     branches:
       - develop
-strategy:
-  #permite que seja possivel testar em multiplas versoes
-  matrix:
-    go: ['1.14', '1.15']
 jobs:
   #job name
   check-application:
     runs-on: ubuntu-latest
+    strategy:
+      #permite que seja possivel testar em multiplas versoes
+      matrix:
+        go: ['1.14', '1.15']
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v2
