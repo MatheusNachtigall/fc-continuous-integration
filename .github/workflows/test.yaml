@@ -20,6 +20,8 @@ jobs:
       - name: Test cases
         working-directory: go
         run: go test
+      - name: Test math.go File
+        working-directory: go
         run: go run math.go
 
 
