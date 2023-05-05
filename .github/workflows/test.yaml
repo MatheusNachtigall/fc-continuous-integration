@@ -12,16 +12,16 @@ jobs:
       # matrix:
       #   go: ['1.14', '1.15']
     steps:
-      - name: Test Cases
-        uses: actions/checkout@v2
-        uses: actions/setup-go@v2
-          with:
-            go-version: 1.14
-            # go-version: ${{ matrix.go }}
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: 1.14
+          # go-version: ${{ matrix.go }}
+      - name: Test cases
         working-directory: go
-        run: cd go/
         run: go test
         run: go run math.go
+
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
